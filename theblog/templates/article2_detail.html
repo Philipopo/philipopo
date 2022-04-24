@@ -1,0 +1,37 @@
+{% extends 'blog.html' %}
+{% load static %}
+{% block title %}{{ post2.title_tag }}{% endblock %}
+
+{% block content %}
+<div class="article">
+  <div class="block"></div>
+  <div class="author">
+    <div class="authora">
+      <div class="igimag">
+
+      </div>
+      <h6>Philip Bouwatife</h6>
+      {{ post2.post_date }}
+    </div>
+  </div>
+  <div class="maind">
+    <strong class="fatitle">{{ post2.title|safe }}</strong>
+    <p>{{ post2.snippet }}</p>
+  </div>
+  <div class="pici">
+    {% if post2.header_image %}
+    <img src="{{ post2.header_image.url }}" class="drooll">
+    {% endif %}
+
+  </div>
+  <div class="texto">
+    {{ post2.body|safe }}
+    
+
+  </div>
+
+</div>
+
+
+
+  {% endblock %}

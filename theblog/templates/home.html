@@ -1,0 +1,608 @@
+{% extends 'blog.html' %}
+{% block title %}Philipopo{% endblock %}
+
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sup" class="top">
+<div class="banner1">
+  <div>
+  <img class="pic1" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-fauxels-3184454.jpg' %}">
+  <div class="over">
+
+  </div>
+  </div>
+  <div class="text-box text-box1">
+    <h1>
+      This is <span class="faj">PHILIPOPO</span>
+    </h1>
+    <span class="span"></span><br>
+    <p>
+      I help designers, small agencies and businesses bring their ideas to life. Powered by Figma, VS Code and coffee, I turn your requirements into CMS-ified and ecommerce-ified websites - on time and on budget.
+    </p>
+  </div>
+</div>
+
+<div class="banner2">
+  <div>
+  <img class="pic1" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-antoni-shkraba-5206297.jpg' %}">
+  <div class="over">
+
+  </div>
+  </div>
+  <div class="text-box text-box2  box from-top">
+    <h1>
+      Web Development
+    </h1>
+    <span class="span"></span><br>
+    <p>
+      Specializing in custom theme development. If you're a business seeking a web presence or are looking to hire, contact me here.
+    </p>
+  </div>
+</div>
+
+<div class="banner3">
+  <div>
+  <img class="pic1" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-fauxels-3183127.jpg' %}">
+  <div class="over">
+
+  </div>
+  </div>
+  
+  <div class="text-box text-box3">
+    <h1>
+      <span class="faj">Frontend</span> Engineer
+    </h1>
+    <span class="span"></span><br>
+    <p>
+      Clean modern designs and templates , optimized for performance, search engines and converting users to customers.
+    </p>
+  </div>
+</div>
+
+<div class="banner4">
+  <div>
+  <img class="pic1" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-fauxels-3183197.jpg' %}">
+  <div class="over">
+
+  </div>
+ 
+  </div>
+  
+  <div class="text-box text-box4">
+    <h1>
+      Backend Engineer
+    </h1>
+    <span class="span"></span><br>
+    <p>
+      I am a backend engineer who deals in all kinds of programming languages well versed in Python Django.
+    </p>
+  </div>
+</div>
+
+<div class="cont">
+  <div class="cont1">
+    {% for post in Profile %}
+
+  <a href="{{ post.facebook }} "><div class="fort"><i class="fa-brands fa-facebook-f"></i></div></a>
+  <a href="{{ post.instagram }}"><div class="fort"><i class="fa-brands fa-instagram"></i></div></a>
+  <a href=""><div class="fort"><i class="fa-solid fa-envelope forta"></i></div></a>
+  <a href=""><div class="fort"><i class="fa-solid fa-link forta"></i></div></a>
+  {% endfor %}
+</div>
+</div>
+<div class="kiss">
+<div id="fod" class="kiisa">
+  <a href="#contactz"><button class=" btnn btn btn1 from-right">Contact me</button></a>
+  {% for post in Profile %}
+  <a href="{{ post.fiverr }}"><button class=" btnn btn btn2 from-right">fiverr</button></a>
+  {% endfor %}
+  
+</div>
+
+</div>
+</div>
+<div id ="servicesz"class="main ">
+  <div class="maina">
+    <div class="services">
+      <div class="sect">
+      
+      <div class="servy dot from-left">
+        <h3>web developer portfolio</h3>
+        <span class="span v"></span><br>
+        <p>
+          From  UI/UX animations to React.JS, Django, and Node. JS. Check out the latest cool things I can do for you.
+        </p>
+      </div>
+      <div class="serve dot from-right">
+        
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-solid fa-qrcode ve"></i>
+
+            </div>
+            <div class="font3">
+              <p>
+                FRONT END</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+          <div class="sike">
+            <i class="fa-solid fa-angle-right vo"></i>
+  
+          </div>
+          </div>
+      </div>
+      <div class="serve dot from-right">
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-brands fa-python ve"></i>
+
+            </div>
+            <div class="font3">
+              <p>PYTHON DJANGO
+        </p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+          <div class="sike">
+            <i class="fa-solid fa-angle-right vo"></i>
+  
+          </div>
+          </div>
+      </div>
+      </div>
+      <div class="sect">
+      <div class="serve dot from-left">
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-solid fa-bug-slash ve"></i>
+
+            </div>
+            <div class="font3">
+              <p>TROUBLESHOOT</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+          <div class="sike">
+            <i class="fa-solid fa-angle-right vo"></i>
+  
+          </div>
+          </div>
+      </div>
+      <div class="serve dot from-left">
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-brands fa-bootstrap ve"></i>
+
+            </div>
+            <div class="font3">
+              <p>BOOTSTRAP <br>4 & 5
+            </p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+        <div class="sike">
+          <i class="fa-solid fa-angle-right vo"></i>
+
+        </div>
+        </div>
+      </div>
+      <div class="serve dot from-right">
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-solid fa-shield ve"></i>
+            </div>
+            <div class="font3">
+              <p>APPLICATION
+DEVELOPMENT</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+        <div class="sike">
+          <i class="fa-solid fa-angle-right vo"></i>
+
+        </div>
+        </div>
+      </div>
+      <div class="serve dot from-right">
+        <div class="sikey">
+          <div class="font1">
+            <div class="font2">
+              <i class="fa-brands fa-html5 ve"></i>
+
+            </div>
+            <div class="font3">
+              <p>FRONTEND
+                HTML
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="sikea">
+        <div class="sike">
+           <i class="fa-solid fa-angle-right vo"></i>
+
+        </div>
+        </div>
+      </div>
+      </div>
+      
+
+    </div>
+
+  </div>
+  </div>
+  <div class="more">
+    <div class="text ">
+      <div class="row from-top">
+        <h2>we do <span class="auto-type"></span></h2>
+        
+        
+       <div><br><span class="span"></span><br><p>I specialize in creating sites for individuals and small businesses. You shouldn’t have to settle for cheap solutions or generic templates. I provide custom designs at affordable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. </p></div>
+       
+      </div>
+    </div>
+    <div class="about contor from-right ">
+      <div>
+      
+      
+      <div class="fat1">
+       
+        
+        <a href="#contactz"><div class="bt"><button class="btrn">Contact me</button></div></a>
+        
+        <p>I don't like to define myself by the work I've done, I define myself by the work I am going to do.</p>
+      </div>
+      <div class="fat">
+       
+        
+        <a href="#contactz"><div class="bt"> <button class="btrnn">Contact me</button> </div></a>
+      </div>
+      </div>
+      </div>
+
+      
+
+  
+   
+</div>
+
+ <div class="counter-up">
+ <div class="counter-section reveal">
+   <ul>
+    <li datacount="86"  class="count">
+      <i class="fa-solid fa-briefcase"></i>
+      <span>0+</span>
+      <p>Projects received</p>
+     </li>
+     <li datacount="56" class="count " >
+      <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
+       <span>0+</span>
+       <p>customers returned</p>
+     </li>
+     
+     <li datacount="125"  class="count ">
+      <i class="fa-solid fa-gift"></i>
+     <span>0+</span>
+     <p>recomendations</p>
+    </li>
+   
+     <li datacount="40"  class="count ">
+      <i class="fa-solid fa-award"></i>
+      <span>0+</span>
+      <p>awards</p>
+     </li>
+   </ul>
+  
+ </div>
+    </div>
+<div  id ="blogz" class="blog from-top">
+  <div class="blogb">
+    <h2>Trending...</h2>
+  </div>
+  <div class="bloga">
+    
+    
+      {% for post in Post %}
+{% if post.header_image %}
+<div class="blogc">
+  
+  <a href="{% url 'article-detail' post.pk %}" class="slider">
+<div class="blogo" style="         background-image: url('{{ post.header_image.url }}');" >
+  </div>
+          
+<div class="bann">
+  
+  
+  <div class="sp">
+    <div class="spano">
+      <p>Technology</p>
+    </div>
+  <div class="spanu"></div>
+  </div>
+<div class="banp">
+  <a href="{% url 'article-detail' post.pk %}" class="dhu"><strong>{{ post.title|safe }}</strong></a>
+ 
+</div>
+
+</div>
+</a>
+</div>
+{% endif %}
+{% endfor %}
+  
+    <div class="blogd">
+      {% for post in Post2 %}
+      {% if post.header_image %}
+      <div class="blogca">
+        
+        <a href="{% url 'article2-detail' post.pk %}" class="slider">
+      <div class="blogo" style="         background-image: url('{{ post.header_image.url }}');" >
+        </div>
+                
+      <div class="bann">
+        
+        
+        <div class="sp">
+          <div class="spanoo">
+            <p>lifestyle</p>
+          </div>
+          <div class="spanuu"></div>
+        
+        </div>
+      <div class="banp">
+        <a href="{% url 'article2-detail' post.pk %}" class="dhu"><strong>{{ post.title|safe }}</strong></a>
+       
+      </div>
+      
+      </div>
+      </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+        
+    </div>
+    <div class="bloge">
+      <div class="blogf">
+        {% for post in Post3 %}
+        {% if post.header_image %}
+        <div class="blogca">
+          
+          <a href="{% url 'article3-detail' post.pk %}" class="slider">
+        <div class="blogo" style="         background-image: url('{{ post.header_image.url }}');" >
+          </div>
+                  
+        <div class="banni">
+          
+          
+         
+        <div class="banpo">
+          <a href="{% url 'article3-detail' post.pk %}" class="dhu"><strong>{{ post.title|safe }}</strong></a>
+         
+        </div>
+        
+        </div>
+        </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="blogg">
+        <div class="slider-frame">
+          <div class="slide-images">
+            <div class="img-container">
+              <img class="hu" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-tyler-lastovich-699122.jpg' %}">
+    
+            </div>
+            <div class="img-container">
+              <img class="hu" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-lisa-fotios-230324.jpg' %}">
+    
+            </div>
+            <div class="img-container">
+              <img class="hu" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-julia-m-cameron-4144179.jpg' %}">
+    
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div id="contactz" class="contact ">
+  <div class="contacta tump from-right">
+  <h5>CONTACT US</h5><br>
+  <h2>Reach out for a new project or just say hello</h2>
+  <div class="tom">
+  <form onsubmit="sendEmail(); reset(); return false;" class="men">
+    <h6>GET IN TOUCH</h6>
+    <div class="inputBox">
+    <input type="text" id="name" placeholder="Your Name" required  class="form">
+    </div>
+    <div class="inputBox">
+    <input type="email" id="email" placeholder="Your Email" required class="form">
+    </div>
+    <div class="inputBox">
+    <input type="text" id="phone" placeholder="Your phone number" required class="form">
+    </div>
+    <div class="inputBox">
+    <textarea id="message" placeholder="How Can We Help You" class="form"></textarea>
+    </div>
+    <div class="inputBox">
+    <textarea id="messages" placeholder="How did you get to hear about us" class="form"></textarea>
+    </div>
+    
+    <button type="submit" class="btn  btn-block">SUBMIT</button>
+  </form>
+  <div class="find">
+    <div class="finda">
+      <h6>CONTACT INFO</h6>
+    </div>
+    <div class="finda">
+      <span>Where to Find Us</span><br><br>
+32 Abisogunlee street
+ogba, Ikeja
+94043 
+    </div>
+    <div class="finda">
+      <span>Email Us At</span><br><br>
+      philipboluwatife0@gmail.com
+    </div>
+    <div class="finda">
+      <span>Call Us At</span><br><br>
+      (+234)7082299276
+      (+234)9082065803
+    </div>
+    <div class="finda">
+      {% for post in Profile %}
+      <a href="{{ post.facebook }}"><i class="fa-brands fa-facebook"></i></a>
+      <a href="{{ post.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+      <a href="{{ post.twitter }}"><i class="fa-brands fa-twitter"></i></a>
+      {% endfor %}
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+           
+
+
+
+  
+  <script>
+    $('ul li span').each(function(){
+      const This = $(this);
+      $({Count: This.text()}).animate(
+        {Count: This.parent().attr
+        ("datacount")},
+        {
+          duration: 12000,
+          
+          easing: "linear",
+          step: function(){
+
+          },
+          step: function(){
+            This.text(Math.floor(this.Count
+            ))
+
+          },
+          complete: function(){
+            This.text(this.Count).css(
+              {color:"rgb(255, 30, 0)"})
+
+          }
+        }
+      )
+    })
+   
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+      });
+    });
+  </script>
+ 
+        
+          
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>  
+<script>
+  window.addEventListener('scroll', function () {
+      let header = document.getElementById('fod');
+
+      header.classList.toggle('change', window.scrollY > 70);
+  })
+</script>
+
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>  
+  <script>
+    function sendEmail(){
+      Email.send({
+           Host : "smtp.gmail.com",
+           Username : 'sweetsixtiinn@gmail.com',
+           Password : "Adedayo55+",
+           To : 'philipboluwatife0@gmail.com',
+           From : document.getElementById('email').value,
+           Subject : "New Contact Form Equiry",
+           Body : "Name: " + document.getElementById("name").value
+                 + "<br> Email: " + document.getElementById("email").value
+                 + "<br> phone no: " + document.getElementById("phone").value
+                 + "<br> message: " + document.getElementById("message").value
+                 + "<br> messages: " + document.getElementById("messages").value
+
+
+      }).then(
+      message => alert("Message sent, you have taken a step to sucess!")
+      );
+    }
+
+  </script> 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+{% endblock %}

@@ -1,0 +1,26 @@
+<div class="vok">
+    {% if user.is_authenticated %}
+    <br><br><br>
+    <div class="voka">Add Blog Post</div>
+    <div class="vokb">
+        <div class="faith">
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <button class="btn nn">Post</button>
+            </form>
+            </div>
+            
+            {% else %}
+            <p>please go back to the home page</p><br>
+            <a href="{% url 'home' %}" class="btn nn">back</a>
+            
+            
+            {% endif %} 
+            </div> 
+    </div>
+ 
+ 
+</div>

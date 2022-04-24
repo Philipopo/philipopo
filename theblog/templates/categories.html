@@ -1,0 +1,111 @@
+<div class="okan">
+    <br><br><br>
+  <div class="okana">
+    {% if Cat_menu %}
+  <div class="posta">
+    <div class="headerr">
+      
+          <div class="a">{{ cats }}</div>
+      
+      <div class="r">
+     <div class="k"></div>
+     <div class="t"></div>
+      </div>
+    </div>
+    <div class="real">
+      {% for post in Cat_menu %}
+      <div class="reall">
+        <div class="realb">
+          {% if post.header_image %}
+          <div class="imago" style="         background-image: url('{{ post.header_image.url }}');">
+          
+              <div class="cartigo">
+                <a href="{% url 'category' post.category|slugify %}" class="pussii">{{ post.category }}</a>
+              </div>
+            
+  
+          </div>
+          {% endif %}
+          <div class="bodii">
+            <a href="{% url 'article-detail' post.pk %}"><div class="topic"> <a href="{% url 'article-detail' post.pk %}" class="pussi">{{ post.title|safe }}</a></div></a>
+            <div class="snipii">{{ post.snippet|safe }}</div>
+            <div class="editt"><i><strong class="dati">{{ post.post_date }}</strong></i>
+              {% if user.is_authenticated %}
+              {% if user.id == 1 %}
+             
+              <div class="foto"> <a href="{% url 'delete_post' post.pk %}" class="btn nn">Delete</a></div>
+              {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      {% endfor %}
+      
+    </div>
+  
+    
+  
+  </div>
+  {% else %}
+  <h5 class="fub">There is no POST under {{ cats }} yet</h5>
+  {% endif %}
+    
+      <div class="bossb">
+        <div class="bossba">
+            <div class="bossca">
+              <br><br><br>
+              <h5>Categories</h5>
+   
+            </div>
+            <div class="bossva">
+             {% for item in Cart_menu %}
+             <div><a class="dropdown-item grop" href="{% url 'category' item|slugify %}"><strong class="fron">. </strong> {{ item }}</a><hr></div>
+           {% endfor %}
+            </div>
+   
+        </div>
+     </div >
+    
+  </div>
+  <div class="funy">
+    <div class="femm">
+      <div class="fenn">
+        <div class="fec">
+         <h6>About us</h6><br>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales mi ut dictum volutpat. Etiam vitae rhoncus sapien. Aenean sollicitudin euismod egestas. Interdum et malesuada fames ac ante ipsum </p>
+        </div><br>
+        <div class="fec">
+         <h6>Links</h6><br>
+         <a href="#" class="limt">Home</a><br><br>
+         <a href="#" class="limt">Blog Page</a><br><br>
+         <a href="#" class="limt">Categories</a><br><br>
+         <a href="#" class="limt">About Author</a><br><br>
+        </div>
+        <div class="fec">
+          <h6>Contact</h6><br>
+          <a  class="limt"><i class="fa fa-globe" aria-hidden="true"></i> 18 ogba ikeja</a><br><br>
+          <a class="limt"> <i class="fa fa-phone" aria-hidden="true"></i> +2348023889194</a><br><br>
+          <a  class="limt"><i class="fa fa-envelope" aria-hidden="true"></i> sweetsixtiinn@gmail.com</a><br><br>
+          <a class="limt"><i class="fa fa-bullseye" aria-hidden="true"></i> sweetsixtiinn</a><br><br>
+        </div><br>
+        <div class="fec">
+          <h6>Connect More</h6><br>
+          <a href="#" class="limt">Home</a><br><br>
+         <a href="#" class="sign Up">Blog Page</a><br><br>
+        </div><br>
+      </div>
+      <div class="feb">
+        <a  class="limt"><i class="fa fa-facebook-square" aria-hidden="true">F</i></a><br><br>
+        <a class="limt"><i class="fa fa-twitter-square" aria-hidden="true">F</i></a><br><br>
+        <a  class="limt"><i class="fa fa-instagram" aria-hidden="true">F</i></a><br><br>
+      </div>
+      <div class="fev">
+        <p>Designed and managed by <strong><i>philipopo</i></strong></p>
+      </div>
+    </div>
+  
+  </div>
+  </div>

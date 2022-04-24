@@ -1,0 +1,1982 @@
+<!doctype html>
+
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/0b89971155.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,300&family=Fredoka&family=Fredoka+One&family=Josefin+Sans:ital,wght@1,300&family=Livvic&family=Montserrat&family=Open+Sans:ital,wght@0,400;1,300&family=Pacifico&family=Patrick+Hand&family=Roboto:wght@300&family=Shippori+Antique+B1&family=Syne+Tactile&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,300&family=Fredoka&family=Fredoka+One&family=Josefin+Sans:ital,wght@1,300&family=Livvic&family=Montserrat&family=Open+Sans:ital,wght@0,400;1,300&family=Pacifico&family=Patrick+Hand&family=Roboto:wght@300&family=Rubik:wght@300&family=Shippori+Antique+B1&family=Syne+Tactile&family=Ubuntu:wght@300&display=swap&family=Cabin" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic&family=Montserrat&family=Open+Sans&family=Roboto:wght@300&family=Syne+Tactile&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" ></script>
+   
+    
+    
+
+
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       
+     
+
+
+       
+
+
+    <title> 
+      {% block title %}
+      philipopo
+      {% endblock %}
+
+    </title>
+    
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            overflow-x: hidden;
+            
+        }
+        .body{
+            overflow-x: hidden;
+            
+        }
+        body:focus { outline: 0; }
+        .branda{
+            width: 50px;
+            padding: 0px;
+            background-color: transparent;
+            
+        }
+        .name{
+            font-weight: 1000;
+            font-size: 22px;
+            color: orangered;
+            font-family: 'Rubik', sans-serif;
+        }
+        .namea{
+            color:rgb(255, 30, 0);
+        }
+        .nameb{
+            color:rgb(255, 30, 0);
+        }
+
+
+
+     header{
+         
+         width: 100%;
+         
+         
+     }
+        
+
+
+        .container{
+            max-width: 120rem;
+            width:100%;
+            margin: 0 auto;
+            
+            max-height: 61px;
+            overflow-y: hidden;
+            position: fixed;
+            top:0px;
+            box-shadow:0 3px 1rem rgba(0,0,0,.1);
+            background-color: transparent;
+           
+            
+           
+
+        }
+        .parapan{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+        }
+        #mainbox{
+            cursor: pointer;
+            transition: ease-in .6s;
+            position: relative;
+            left:6000px;
+            color: rgb(255, 30, 0);
+            margin: 8px;
+            font-size: 20px;
+        }
+        .sidemenu{
+            position:absolute;
+            top: 0px;
+
+            width: 0px;
+            
+            height: 100%;
+            background-color: white;
+           
+            z-index: 1;
+            overflow-x: hidden;
+            transition: ease-in .5s;
+            overflow-y: hidden;
+        }
+        .sidemenu .closebtn{
+            position: absolute;
+            top:0px;
+        }
+        .scrolling-active{
+            background-color: #fff;
+            box-shadow:0 3px 1rem rgba(0,0,0,.1);
+        }
+
+        nav{
+            margin: 0;
+            padding-top: 0.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            flex-wrap: wrap;
+            max-height: 100px;
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            font-family: 'Cabin', sans-serif;
+            
+             
+        }
+
+        .brand{
+            transform: translateX(-100rem);
+            animation: slideIn .5s forwards;
+        }
+
+        nav ul{
+            display: flex;
+            padding: 0px;
+            flex-wrap: wrap ;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            transform: translateX(100rem);
+            animation: slideIn .5s forwards;
+        }
+
+        nav ul li:nth-child(1){
+            animation-delay: 0s;
+        }
+        nav ul li:nth-child(2){
+            animation-delay: .3s;
+        }
+        nav ul li:nth-child(3){
+            animation-delay: .6s;
+        }
+        nav ul li:nth-child(4){
+            animation-delay: .9s;
+        }
+        nav ul li:nth-child(5){
+            animation-delay: 1.2s;
+        }
+        nav ul li a{
+            padding: 5px 0px;
+            margin: 0px 18px;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 10px;
+            color: white;
+
+            
+        }
+        
+        nav ul li a:last-child{
+            margin-right: 0;
+    
+        }
+        nav ul li a::before,
+        nav ul li a::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: crimson;
+            left: 0;
+            transform: scaleX(0);
+            transition: all .5s;
+
+
+        }
+
+        nav ul li a::before{
+            top: 0;
+            transform-origin: left;
+        }
+        nav ul li a::after{
+            bottom: 0;
+            transform-origin: right;
+        }
+
+        nav ul li a:hover::before,
+        nav ul li a:hover::after{
+            transform: scaleX(1);
+            text-decoration: none;
+        }
+
+        @keyframes slideIn {
+            from{
+
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        .fuk{
+            color: var(--primary-color);
+        }
+        .linK{
+            color: white;
+        }
+
+        .link:hover{
+          
+          text-decoration: none;
+          color:purple;
+        }
+        .fa-solid{
+            font-size: 17px;
+            cursor: pointer;
+            padding: 5px;
+            
+        }
+        :root{
+            --primary-color: #edf2f2;
+            --secondary-color: #212121;
+        }
+        .dark-theme{
+           --primary-color: #000106;
+           --secondary-color: #fff;
+        }
+        .rcon{
+            width:20px;
+            height: 20px;
+        }
+
+
+        .top{
+            width: 100;
+            height: 450px;
+            background-color: #000106;
+            overflow-y: hidden;
+            position:relative;
+            overflow-x: hidden;
+            
+            
+            
+        }
+        .banner1,.banner2,.banner3,.banner4{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            
+            
+            
+            
+        }
+        .pic1{
+            width:120%;
+            position: absolute;
+            
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            animation: zoom-out 4s linear infinite;
+           
+        }
+        .over{
+            position: absolute;
+            width:100%;
+            height: 100%;
+            background: linear-gradient(to top right, rgb(0, 0, 0), rgb(0, 0, 0));
+            opacity: 50%;
+            
+        }
+
+        @keyframes zoom-out{
+            100%{
+                width: 100%;
+            }
+        }
+
+
+
+        .text-box{
+            width: 50%;
+            position: absolute;
+            top: 160px;
+            left: 100px;
+            color: #fff;
+            animation: textup 12s linear infinite;
+            transform: translateX(-200px);
+        }
+
+        @keyframes textup {
+            10%{
+                transform: translateX(0px);
+
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+
+        .text-box1{
+                animation-delay: 0s;
+        }
+        .text-box2{
+                animation-delay: 4s;
+        }
+        .text-box3{
+                animation-delay: 8s;
+        }
+        .text-box4{
+                animation-delay: 12s;
+        }
+
+
+
+
+        .text-box h1{
+            margin-bottom: 40px;
+        }
+        .text-box p{
+            font-size: 14px;
+            line-height: 22px;
+            
+            
+            
+        }
+        .span{
+          background: rgb(255, 30, 0);  
+          height: 2px;
+          width: 50%;
+          position: absolute;
+          left: 0;
+        
+        }
+        .banner1{
+            animation: slide1 16s linear infinite;
+        }
+        .banner2{
+            animation: slide2 16s linear infinite;
+        }
+        .banner3{
+            animation: slide3 16s linear infinite;
+        }
+        .banner4{
+            animation: slide4 16s linear infinite;
+        }
+        @keyframes slide1{
+            0%{
+                visibility: visible;
+            }
+            25%{
+                visibility: hidden;
+            }
+            50%{
+                visibility: hidden;
+            }
+            75%{
+                visibility: hidden;
+            }
+            100%{
+                visibility: visible;
+            }
+        }
+        @keyframes slide2{
+            0%{
+                visibility: hidden;
+            }
+            25%{
+                visibility: hidden;
+            }
+            50%{
+                visibility: visible;
+            }
+            75%{
+                visibility: hidden;
+            }
+            100%{
+                visibility: hidden;
+            }
+        }
+        @keyframes slide3{
+            0%{
+                visibility: hidden;
+            }
+            25%{
+                visibility: hidden;
+            }
+            50%{
+                visibility: hidden;
+            }
+            75%{
+                visibility: visible;
+            }
+            100%{
+                visibility: hidden;
+            }
+        }
+       
+        @keyframes slide4{
+            0%{
+                visibility: hidden;
+            }
+            25%{
+                visibility: hidden;
+            }
+            50%{
+                visibility: hidden;
+            }
+            75%{
+                visibility: hidden;
+            }
+            100%{
+                visibility: visible;
+            }
+        }
+
+        .cont{
+            position: absolute;
+            width:30px;
+            height: 100%;
+          
+            left: 900px;
+        }
+        .cont1{
+            width: 100%;
+            height: 70%;
+           
+            margin-top: 100px;
+            
+        }
+        .fort{
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            color:rgb(255, 30, 0);
+            border-width: 2px;
+            border-style: solid;
+            border-color:rgb(255, 30, 0) ;
+            border-radius: 100%;
+            margin-bottom: 50px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: 0.4s;
+            
+        }
+        .fort:hover{
+            width:110%;
+            height:32px;
+            border-color: purple;
+            border-width:3px ;
+            color: purple;
+            
+
+        }
+        .forta{
+            font-size: 12px;
+            transition: 0.4s;
+        }
+        .forta:hover{
+            color:purple;
+        }
+        .kiss{
+           position: absolute;
+           top: 350px;
+           left:90px;
+        }
+        .kiisa{
+            position: fixed ;
+           
+        }
+        .change{
+            position: relative;
+        }
+        .btn{
+            border: 1px solid white ;
+            background: none;
+            padding: 7px 15px;
+            font-size: 20px;
+            cursor: pointer;
+            margin:10px;
+        
+            min-width: 150px;
+            border-radius: 0;
+            cursor: pointer;
+            
+            position: relative;
+            overflow: hidden;
+
+
+        }
+        .btn1,.btn2{
+            color: rgb(255, 30, 0) ;
+            font-weight: 600;
+            
+            transition: 0.8s;
+        }
+        .btn1:hover,.btn2:hover{
+            color: white;
+            background-color: rgb(255, 30, 0) ;
+
+            
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background:rgb(255, 30, 0) ;
+            z-index: -1;
+            
+       
+            transition: 0.8s;
+        }
+        .btn1::before{
+            top: 0;
+            border-radius: 0 0 50% 50%;
+
+        }
+        .btn2::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+            
+        }
+        .btn1:hover::before,.btn2:hover::before{
+            height: 180%
+        }
+        .scrolling{
+            color:black;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 250ms ease-in;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+        }
+
+.animate{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 100px ;
+}
+.from-left {
+    transform: translateX(-50%);
+    opacity: 0;
+ 
+    
+}
+.from-right {
+    transform: translateX(50%);
+    opacity: 0;
+}
+.from-top {
+    transform: translateY(50%);
+    opacity: 0;
+}
+.from-left,
+.from-right,
+.from-top {
+    transition: transform, 600ms ease-in;
+    
+    
+
+}
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+.from-top.appear{
+    transform: translateY(0);
+    opacity: 1;
+}
+.main{
+    width:100%;
+
+}
+.maina{
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.services{
+    width: 100%;
+    height: 800px;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.servy{
+    width:43%;
+    height: 200px;
+   
+    margin: 20px;
+    padding: 10px;
+    color: rgb(207, 206, 206);
+    
+}
+.v{
+    margin-left: 10px ;
+    
+}
+.servy h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    
+}
+.serve{
+    width:20%;
+    height: 200px;
+    
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2%;
+    
+    
+    
+}
+.sike{
+    width:45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: rgb(41, 41, 41);
+    
+    position: relative;
+    
+    bottom:15px;
+    border-style: solid;
+    border-color: rgb(255, 30, 0);
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    padding-top:8px ;
+    padding-bottom: 10px;
+    
+
+
+}
+.sikea{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    max-height: 0px;
+}
+.sikey{
+    width:100%;
+    height:190%;
+    background-color: rgb(29, 29, 29);
+    border-radius: 2%;
+    display:flex;
+    justify-content: center;
+    transition: 0.4s;
+
+
+}
+.sikey:hover{
+    background-color:rgb(253, 97, 76) ;
+}
+.main{
+    background: rgba(0,0,0,0.94)url("{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-pixabay-279844.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+   
+    
+}
+.sect{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.font1{
+     width:100%;
+     height: 100%;
+    
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+}
+.font2{
+    width:100%;
+    height: 30%;
+   
+    font-size: 32px;
+    float: right;
+}
+.ve{
+    font-size: 32px;
+    float: right;
+    color:rgb(255, 30, 0);
+    
+}
+.vo{
+    font-size: 20px;
+  
+    color:rgb(255, 30, 0);
+}
+.font3{
+    padding-top: 4px;
+    padding-right: 17px;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 650;
+    text-transform: uppercase;
+    
+}
+.more{display: flex;
+    justify-content: center;
+    width: 100%;
+
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.text{
+    width: 47%;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+.text p{
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    
+}
+.spano{
+      background: rgb(255, 30, 0);  
+      height: 2px;
+      width: 500px;
+      
+        
+        }
+
+.about{
+    width: 47%;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+   
+}
+.fat{
+    background: rgba(0,0,0,0.94)url("{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\alone-concept-illustration_114360-2393.webp' %}");
+    width:100%;
+    height:100%;
+    position: absolute;
+    transition: transform, 400ms ease-in;
+    background-size: cover;
+    background-position: center;
+    
+  
+    
+    
+}
+.fat h3{
+    color:#808080;
+    text-align: center;
+    text-shadow: #212121;
+    
+}
+.fat:hover{
+    opacity:0;
+}
+.fat1{
+    background-color: burlywood;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background:rgba(0,0,0,0.7)url("{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.webp' %}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    text-align: center;
+    
+
+}
+
+
+
+
+.conto{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    color: black;
+}
+.conto h1{
+    font-weight: 600;
+}
+.auto-type{
+    color:rgb(255, 30, 0);
+    font-weight: 650;
+    
+    font-size: 35px;
+}
+.bt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btrn{
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: rgb(255, 30, 0);
+    background-color: transparent;
+    padding:5px;
+    width:50%;
+    color: rgb(255, 30, 0);
+    font-weight: 650;
+    margin-top: 150px;
+    background-color: white;
+
+    
+}
+.fat1 h4{
+    color: rgb(192, 190, 190);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fat1 p{
+    color:rgb(192, 190, 190);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btrnn{
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: rgb(255, 30, 0);
+    background-color: white;
+    padding:10px;
+    width:50%;
+    color: rgb(255, 30, 0);
+    font-weight: 650;
+    margin-top: 150px;
+
+    
+}
+.counter-up{
+    width:100%;
+    
+    padding: 5px;
+    
+    
+    
+    background:rgba(0,0,0,0.94) url("{% static 'theblog/images/ C:\Users\HP\sweet\project\static\theblog\images\pexels-pixabay-207300.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+
+}
+
+.counter-section{
+    margin: 10% auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.counter-section ul{
+    display:flex;
+    list-style: none;
+}
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.count{
+    display: flex;
+    flex-direction: column;
+    border-style: dashed;
+    border-width: 2px;
+   
+    border-color: rgb(255, 30, 0);
+    min-width: 160px;
+    min-height: 160px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgb(255, 30, 0);
+    
+    
+}
+.count i{
+    font-size: 34px;
+    color: white;
+}
+.count span{
+    font-size: 20px;
+    color: white;
+}
+.count p{
+    color:white;
+}
+.blog{
+    width:100%;
+    max-width: 1400px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloga{
+    width:100%;
+    
+    
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.blogc{
+    width: 33%;
+    height:340px;
+    
+
+    
+    
+   
+
+}
+.blogca{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    
+    background-position: center;
+    background-size: cover;
+
+}
+.blogo{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+.bann{
+    width:100%;
+    height:100%;
+    background: linear-gradient(to bottom, rgb(252, 250, 250, 0)5%, rgb(0, 0, 0, 1));
+    
+    position: relative;
+    bottom:330px;
+    padding-top:220px;
+    padding-left: 0px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+.banni{
+    width:100%;
+    height:100%;
+    
+    
+    position: relative;
+    bottom:165px;
+    padding-top:120px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+.bannn{
+    width:100%;
+    height:100%;
+    background: linear-gradient(to bottom, rgb(252, 250, 250, 0)5%, rgb(0, 0, 0, 1));
+    
+    position: relative;
+    bottom:330px;
+    padding-top:50px;
+    padding-left: 0px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+.sp{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+}
+.spano{
+    width:40%;
+    height:30px;
+    background: rgb(255, 30, 0); 
+    text-align: left;
+    padding-left: 3px;
+}
+.spanoo{
+    width:40%;
+    height:30px;
+    background:purple; 
+    text-align: left;
+    padding-left: 3px;
+}
+.spanoo p{
+    color:white;
+    font-weight: 650;
+}
+.spano p{
+    color:rgb(201, 201, 201);
+    font-weight: 650;
+}
+.spanu{
+          background: rgb(255, 30, 0);  
+          height: 2px;
+          width: 50%;
+          
+          left: 0;
+        
+        }
+        .spanuu{
+          background: purple;  
+          height: 2px;
+          width: 50%;
+          
+          left: 0;
+        
+        }
+ a:link { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+.dhu{
+    color:rgb(201, 201, 201);
+}
+.dhu :hover{
+    text-decoration: none;
+    color:purple;
+}
+.banpo{
+    width:50%;
+    background-color: rgba(8, 8, 8, 0.8);
+    font-size: 10px;
+    padding:5px;
+}
+.banp{
+    padding-left: 15px;
+}
+.banp a :link{
+    text-decoration: none ;
+}
+.blogd{
+    width: 33%;
+    
+    background-color: rgb(209, 77, 77);
+    height:350px;
+}
+.bloge{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(2, 117, 40);
+    display: flex;
+    flex-direction: column;
+    height:350px;
+}
+.blogf{
+    width:100%;
+    height:50%;
+    background-color: brown;
+    
+}
+.blogg{
+    width:100%;
+    height:50%;
+    background-color: purple;
+    position: relative;
+}
+.slider-frame{
+    overflow:hidden;
+    height:100%;
+    width:100%;
+
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:100%;}
+    30% {left:100%;}
+    40% {left:200%;}
+    50% {left:200%;}
+    60% {left:100%;}
+    70% {left:100%;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 300%;
+    height:100%;
+    margin: 0 0 0 -200%;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container{
+    height: 100%;
+    width: 33.33334%;
+    position: relative;
+    float: left;
+}
+
+.hu{
+    width:100%;
+    height:100%;
+}
+.slider{
+    position: relative;
+}
+.blogb{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.blogb h2{
+    font-weight: 700;
+    color:black;
+}
+.review{
+    width: 100%;
+    overflow-x: scroll;
+}
+.contact{
+    background: rgba(15, 15, 15, 0.95) url("{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\pexels-engin-akyurt-1493226.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    width:100%;
+    
+    margin-top:150px;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 80px;
+    
+ 
+
+}
+.contacta{
+    width: 100%; 
+    padding-top: 100px;
+    text-align: center;
+    max-width: 2000px;
+}
+.contacta h5{
+    font-weight: 650;
+    color:rgb(255, 30, 0);
+}
+.contacta h2{
+    font-weight: 650;
+    color: white;
+    padding-bottom: 20px;
+}
+.inputBox{
+    background: transparent;
+    
+
+}
+.form{
+    background: transparent;
+    border-width: 0px;
+    width:100%;
+    min-height: 90px;
+    border-bottom-width:1px;
+    border-color: rgba(110, 110, 110, 0.7) ;
+    color: white;
+    
+}
+input:focus{
+    border-width: 0px !important;
+    border-bottom-width:1px;
+    border-color: rgb(255, 30, 0);
+
+}
+.form:hover{
+    border-width: 0px;
+    border-bottom-width:1px;
+    border-color: rgb(255, 30, 0);
+
+}
+.btn-block{
+    background-color: rgb(2, 117, 40) ;
+    border-width: 0px;
+    color: white;
+    font-weight: 600;
+    margin-top: 50px;
+    width: 98%;
+    font-size: 13px;
+    letter-spacing: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.btn-block:hover{
+    background-color:rgb(1, 85, 29)  ;
+    color: white;
+}
+
+
+.tom{
+   
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+.men{
+    
+    padding: 40px;
+    text-align: left;
+    width: 55%;
+    background-color:rgba(0,0,0,0.4) ;
+}
+.men h6{
+    color: white;
+    font-weight: 700;
+}
+.find{
+    width: 30%;
+    
+    background-color: rgb(8, 8, 8);
+    padding: 30px;
+
+}
+.finda{
+    width: 75%;
+    text-align: left;
+   
+    margin-bottom: 60px;
+    color: rgb(184, 183, 183, 0.8);
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+.finda h6{
+    font-weight: 650;
+    letter-spacing: 3px;
+    
+}
+.finda span{
+    font-weight: 600;
+    letter-spacing: 1px;
+   color: rgb(255, 30, 0);
+   padding-bottom: 30px;
+   font-size: 16px;
+
+}
+.finda i{
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin-top: 70px;
+  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+.end{
+    padding-right: 70px;
+}
+.end h2{
+    color:rgb(255, 30, 0);
+}
+.end span{
+    font-weight: 650;
+    color: white;
+}
+.end p{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.bossend{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    background-color:rgb(17, 17, 17) ;
+    flex-direction: column; 
+    color:rgb(119, 119, 119)
+}
+.bottoma{
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+.bottoma strong{
+    color: white;
+
+}
+.bottoma span{
+    color:rgb(255, 30, 0);
+}
+.divide{
+    width: 100%;
+    height: 30%;
+    
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 650;
+   
+
+}
+.divida{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 0px;
+
+
+}
+.divido{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    padding-top: 0px;
+    flex-direction: column;
+    padding-left: 50px;
+    
+
+
+}
+.spin{
+    width: 3px;
+    height: 110px;
+    background-color: rgb(255, 30, 0);
+}
+.sname{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.karen{
+    list-style: none;
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+.faj{
+    color: purple
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.authora{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.igimag{
+    width: 80px;
+    height: 80px;
+    background-image: url("{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\Screenshot_20220419-171007-removebg-preview.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    margin-bottom:10px ;
+    
+    
+    border-radius: 100%;
+}
+.block{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(26, 26, 26);
+}
+.maind{
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.maind p{
+    font-size: 20px;
+    color: rgb(104, 104, 104);
+    padding-bottom: 20px;
+}
+.fatitle{
+    text-align: center;
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+.pici{
+    width:70%;
+    
+}
+.drooll{
+    width:100%;
+    
+}
+.texto{
+    width:70%;
+    text-align: left;
+    line-height: 30px;
+    padding-top: 20px;
+    color: rgb(104, 104, 104);
+    font-weight: 500;
+    padding-bottom: 50px;
+
+    
+}
+
+
+@media only screen and (max-width: 450px){
+    .top{
+            width: 120%;
+            height: 300px;
+        }
+    #mainbox{
+        left: 0px;
+    }
+    .brand{
+            padding-left: 130px;
+            
+        }
+    #icon{
+        opacity:0;
+    }
+    .closebtn i{
+        color:rgb(255, 30, 0);
+        font-size: 27px;
+        
+    }
+    .closebtn{
+        left:340px;
+    }
+    .text-box{
+            width: 60%;
+            
+            top: 70px;
+            left: 50px;
+           
+        }
+        .text-box h1{
+            margin-bottom: 20px;
+            font-size: 30px !important;
+        }
+        .text-box p{
+            font-size: 14px;
+            line-height: 18px;
+            
+            
+        }
+        .kiss{
+           position: absolute;
+           top: 240px;
+           left:40px;
+        }
+        .sect{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.servy{
+    width: 80%;
+    
+}
+.serve{
+    width: 40%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 170px;
+}
+.services{
+    height: 1000px;
+}
+.more{
+    flex-wrap: wrap;
+
+}
+.text{
+    width:80%;
+    height: 350px;
+    padding-right: 15px;
+
+}
+.about{
+    width: 100%;
+    border-width: 0px;
+    border-color: transparent;
+}
+.fat1{
+    border-width: 0px;
+    border-color:transparent;
+}
+.counter-section ul{
+    flex-wrap: wrap;
+}
+.count{
+    margin-bottom: 20px;
+}
+.bloga{
+    flex-wrap: wrap;
+}
+.blogc{
+    width: 80%;
+}
+.blogd{
+    width:80%;
+
+}
+.bloge{
+    width:80%;
+}
+.tom{
+    flex-wrap: wrap;
+}
+.find{
+    width:95%;
+}
+.men{
+    width:95%;
+}
+        
+    
+}
+
+
+@media only screen and (min-width: 1000px){
+    .cont{
+        left:1000px
+    }
+
+}
+@media only screen and (min-width: 1150px){
+    .cont{
+        left:1150px
+    }
+
+}
+@media only screen and (min-width: 1250px){
+    .cont{
+        left:1250px
+    }
+
+}
+
+
+
+
+
+
+    </style>
+        
+
+    
+
+
+
+
+
+  </head>
+
+  <body>
+      <div class="body">
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    <header>
+      
+        <div id="header" class="container ">
+          <nav>
+            <div class="brand">
+   
+            
+            
+        <span class="name">Philip<span class="namea">o</span>p<span class="nameb">o</span>.</span>
+        </div>
+            <ul  class="fuk">
+              <li><a id="fok" class="link" href="{% url 'home' %}">Home</a></li>
+              <li><a id="foka" class="link" href="{% url 'home' %}#contactz">Contact</a></li>
+              <li><a id="fokb" class="link" href="#aboutz">About</a></li>
+              <li><a id="fokc" class="link" href="{% url 'home' %}#servicesz">services</a></li>
+              <li><a id="fokd" class="link" href="{% url 'home' %}#blogz">Blog</a></li>
+              <img  id="icon" class="rcon" src="{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\images-removebg-preview.png' %}">
+              
+
+          
+            </ul>
+            
+           
+            
+          </nav>
+        </div>
+     
+    </header>
+<div class="parapan">
+    <div id="mainbox" onclick="openFunction()"><i class="fa-solid fa-sliders tog"></i></div>
+    
+    <div id="menu" class="sidemenu">
+        <div class="sname">
+        <span class="name">Philip<span class="namea">o</span>p<span class="nameb">o</span>.</span></div>
+        <div class="divide">
+            <div class="divida">
+                <a class="karen " href="#">Home</a>
+                <a  class="karen " href="#">Contact</a>
+                <a class="karen "  href="#">About</a>
+            </div>
+            <span class="spin">
+
+            </span>
+            <div class="divido">
+                <a  class="karen " href="#">services</a>
+                    <a  class="karen " href="#">Blog</a>
+
+            </div>
+
+        </div>
+        
+        <a href="#" class="closebtn" onclick="closeFunction()"><i class="fa-solid fa-xmark"></i></a>
+        <div class="bottoma">
+            <div>
+              © Copyright Philipopo 2022 <span>|</span> Site Template by <strong>Philipopo</strong>
+            </div>
+           
+            
+          </div>
+     
+    
+    </div>
+    </div>
+    <div id="aboutz" class="bossend">
+        <div class="bottom">
+          <div class="end">
+            <h2>PHILIPOPO.</h2><br>
+            <p>
+                I have been working as a freelance designer and front-end developer since 2019. I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.
+            </p>
+          </div>
+          <div class="end">
+            <span>Get Notified</span><br><br>
+            <p>
+              Get notified immidiately  for the latest updates, coming soon....
+            </p>
+          </div>
+        </div>
+        <div class="bottoma">
+          <div>
+            © Copyright Philipopo 2022 <span>|</span> Site Template by <strong>Philipopo</strong>
+          </div>
+      
+         
+          
+        </div>
+        
+        </div>
+<script>
+    function openFunction(){
+        document.getElementById("menu").style.width="416px";
+        document.getElementById("mainbox").style.marginLeft="416px";
+    }
+    function closeFunction(){
+        document.getElementById("menu").style.width="0px";
+        document.getElementById("mainbox").style.marginLeft="0px";
+
+    }
+
+</script>
+
+<script>
+    $(function(){
+    $('input').blur();
+});
+</script>
+    
+<!-------start ------->
+<script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        for(var i =0; i< reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 100;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('header');
+
+        header.classList.toggle('scrolling-active', window.scrollY > 0);
+    })
+</script>
+
+
+
+
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('fok');
+
+        header.classList.toggle('scrolling', window.scrollY > 0);
+    })
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('foka');
+
+        header.classList.toggle('scrolling', window.scrollY > 0);
+    })
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('fokb');
+
+        header.classList.toggle('scrolling', window.scrollY > 0);
+    })
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('fokc');
+
+        header.classList.toggle('scrolling', window.scrollY > 0);
+    })
+</script>
+<script>
+    window.addEventListener('scroll', function () {
+        let header = document.getElementById('fokd');
+
+        header.classList.toggle('scrolling', window.scrollY > 0);
+    })
+</script>
+<!----------stop------------->
+  
+ 
+<script>
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\sun-icon-on-black-background-vector-15985031-removebg-preview.png' %}"
+        }else{
+            icon.src = "{% static 'theblog/images/C:\Users\HP\sweet\project\static\theblog\images\images-removebg-preview.png' %}"
+        }
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const sliders = document.querySelectorAll('.animate');
+    const btns = document.querySelectorAll('.btnn');
+    const dots = document.querySelectorAll('.dot');
+    const rows = document.querySelectorAll('.row');
+    const contors = document.querySelectorAll('.contor');
+    const counts = document.querySelectorAll('.count');
+    const datacounts = document.querySelectorAll('.datacount');
+    const blogs = document.querySelectorAll('.blog');
+    const boxs = document.querySelectorAll('.box');
+    const tumps = document.querySelectorAll('.tump');
+    
+    
+    const appearOptions = {
+        threshold: 0,
+        
+    };
+
+    const appearOnScroll = new IntersectionObserver
+    (function(
+        entries,
+         appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting){
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        },
+         appearOptions);
+
+         faders.forEach(fader => {
+             appearOnScroll.observe(fader);
+         });
+
+         sliders.forEach(slider => {
+             appearOnScroll.observe(slider);
+         });
+
+         btns.forEach(btn => {
+             appearOnScroll.observe(btn);
+         });
+         dots.forEach(dot => {
+             appearOnScroll.observe(dot);
+         });
+         rows.forEach(row => {
+             appearOnScroll.observe(row);
+         });
+         contors.forEach(contor => {
+             appearOnScroll.observe(contor);
+         });
+         counts.forEach(count => {
+             appearOnScroll.observe(count);
+         });
+         datacounts.forEach(datacount => {
+             appearOnScroll.observe(datacount);
+         });
+         blogs.forEach(blog => {
+             appearOnScroll.observe(blog);
+         });
+         boxs.forEach(box => {
+             appearOnScroll.observe(box);
+         });
+         tumps.forEach(tump => {
+             appearOnScroll.observe(tump);
+         });
+       
+</script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["freelance.",
+        "programming.",
+        "ui ux design.",
+        "app development."],
+        typeSpeed: 150,
+        backspeed: 150,
+        loop: true
+    })
+</script>
+
+<script src="https://github.com/bfintal/Counter-Up.git">
+    
+</script>
+
+
+
+
+
+
+   <i class="bi bi-alarm"></i>
+    
+
+       
+       
+         
+   
+ 
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

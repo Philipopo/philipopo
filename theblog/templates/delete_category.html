@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Delete Category{% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+
+{% for item in cat_menu_list %}
+{{ item }}
+{% endfor %}
+<h1>Delete Category...</h1>
+<h2>Delete: {{ item.name }}</h2>
+
+<div class="form-group">
+<form method="POST">
+    {% csrf_token %}<br>
+    Are you sure you want to delete <strong>"{{ post }}"</strong>?<br>
+  
+    <button class="btn">Delete</button>
+</form>
+</div>
+
+{% else %}
+<p>please go back to the home page</p><br>
+<a href="{% url 'home' %}" class="btn">back</a>
+
+{% endif %}
+
+
+
+{% endblock %}
