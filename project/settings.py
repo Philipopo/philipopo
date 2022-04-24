@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-g)(mp4ao3g7av6uv^&kz+=87b+wc&2d5^yl3rk+&y+iok4d!)9
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['https://projectcrm1.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['crmphilipopo.herokuapp.com', '127.0.0.1']
 
 
 
