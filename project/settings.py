@@ -15,7 +15,7 @@ from pathlib import Path
 
 import os
 
-import dj_database_url
+
 
 
 
@@ -159,4 +159,4 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+
