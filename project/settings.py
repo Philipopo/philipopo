@@ -14,7 +14,7 @@ from distutils.fancy_getopt import FancyGetopt
 from pathlib import Path
 
 import os
-import django_heroku
+
 import dj_database_url
 
 
